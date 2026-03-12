@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceHub - Premier Financial Services</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Theme & Font Controls -->
+    <div class="controls-panel">
+        <button class="btn btn-sm btn-outline-primary me-2" data-bs-toggle="offcanvas" data-bs-target="#settingsPanel">
+            <i class="bi bi-gear"></i> Settings
+        </button>
+    </div>
+
+    <!-- Settings Panel -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="settingsPanel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Customize</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mb-4">
+                <h6>Theme</h6>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-primary theme-btn active" data-theme="blue">
+                        <i class="bi bi-circle-fill text-primary me-2"></i>Professional Blue
+                    </button>
+                    <button class="btn btn-outline-success theme-btn" data-theme="green">
+                        <i class="bi bi-circle-fill text-success me-2"></i>Growth Green
+                    </button>
+                    <button class="btn btn-outline-warning theme-btn" data-theme="gold">
+                        <i class="bi bi-circle-fill text-warning me-2"></i>Premium Gold
+                    </button>
+                    <button class="btn btn-outline-dark theme-btn" data-theme="dark">
+                        <i class="bi bi-circle-fill text-dark me-2"></i>Executive Dark
+                    </button>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h6>Font Family</h6>
+                <select class="form-select" id="fontSelector">
+                    <option value="Inter">Inter (Modern)</option>
+                    <option value="Playfair Display">Playfair Display (Elegant)</option>
+                    <option value="Roboto">Roboto (Classic)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="bi bi-bank2 me-2"></i>FinanceHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light ms-2 px-3" href="#contact">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100 pt-5">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-4 fade-in">
+                            Your Financial Future<br>
+                            <span class="text-gradient">Starts Here</span>
+                        </h1>
+                        <p class="lead mb-4 fade-in delay-1">
+                            Comprehensive financial solutions for banking, insurance, and investment management. 
+                            Trust our expertise to secure and grow your wealth.
+                        </p>
+                        <div class="hero-buttons fade-in delay-2">
+                            <a href="#services" class="btn btn-primary btn-lg me-3 mb-2">
+                                Explore Services
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg mb-2">
+                                <i class="bi bi-telephone me-2"></i>Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image fade-in delay-3">
+                        <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg" 
+                             alt="Financial Planning" class="img-fluid rounded-3 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="fw-bold counter" data-target="25000">0</h3>
+                        <p class="text-muted">Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="fw-bold">$<span class="counter" data-target="2.5">0</span>B+</h3>
+                        <p class="text-muted">Assets Managed</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="fw-bold counter" data-target="15">0</h3>
+                        <p class="text-muted">Years Experience</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="fw-bold counter" data-target="99">0</h3>
+                        <p class="text-muted">% Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3">Our Financial Services</h2>
+                    <p class="lead text-muted">
+                        Comprehensive solutions tailored to meet your unique financial needs
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-bank"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Banking Solutions</h4>
+                        <p class="text-muted mb-4">
+                            Complete banking services including personal and business accounts, 
+                            loans, and credit facilities.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Personal Banking</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Business Accounts</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Loan Services</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Insurance Coverage</h4>
+                        <p class="text-muted mb-4">
+                            Protect what matters most with our comprehensive insurance 
+                            solutions for life, health, and property.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Life Insurance</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Health Coverage</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Property Protection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Investment Management</h4>
+                        <p class="text-muted mb-4">
+                            Grow your wealth with our expert investment strategies 
+                            and portfolio management services.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Portfolio Management</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Retirement Planning</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Wealth Advisory</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-calculator"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Financial Planning</h4>
+                        <p class="text-muted mb-4">
+                            Strategic financial planning to help you achieve your 
+                            short-term and long-term financial goals.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Goal Setting</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Budget Planning</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Tax Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Digital Payments</h4>
+                        <p class="text-muted mb-4">
+                            Modern payment solutions for seamless transactions 
+                            and digital banking experiences.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Mobile Banking</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Online Transfers</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Payment Gateway</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">24/7 Support</h4>
+                        <p class="text-muted mb-4">
+                            Round-the-clock customer support to assist you with 
+                            all your financial service needs.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Phone Support</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Live Chat</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Email Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" 
+                         alt="About Us" class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content ps-lg-5">
+                        <h2 class="display-5 fw-bold mb-4">Why Choose FinanceHub?</h2>
+                        <p class="lead mb-4">
+                            With over 15 years of experience in the financial industry, 
+                            we've built a reputation for excellence and trust.
+                        </p>
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="bi bi-award text-primary fs-2 mb-3"></i>
+                                    <h5 class="fw-bold">Expert Team</h5>
+                                    <p class="text-muted">Certified financial advisors and specialists</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="bi bi-lock text-primary fs-2 mb-3"></i>
+                                    <h5 class="fw-bold">Secure Platform</h5>
+                                    <p class="text-muted">Bank-level security for all transactions</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="bi bi-graph-up text-primary fs-2 mb-3"></i>
+                                    <h5 class="fw-bold">Proven Results</h5>
+                                    <p class="text-muted">Consistent growth and client satisfaction</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="bi bi-people text-primary fs-2 mb-3"></i>
+                                    <h5 class="fw-bold">Personal Service</h5>
+                                    <p class="text-muted">Tailored solutions for each client</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            Start Your Journey
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3">What Our Clients Say</h2>
+                    <p class="lead text-muted">
+                        Hear from satisfied clients who trust us with their financial future
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-4">
+                            "FinanceHub transformed my financial portfolio. Their expert guidance 
+                            helped me achieve my retirement goals faster than I ever imagined."
+                        </p>
+                        <div class="client-info">
+                            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg" 
+                                 alt="Client" class="client-photo">
+                            <div>
+                                <h6 class="fw-bold mb-0">Sarah Johnson</h6>
+                                <small class="text-muted">Business Owner</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-4">
+                            "The insurance coverage they provided gave me peace of mind. 
+                            Professional service and competitive rates. Highly recommended!"
+                        </p>
+                        <div class="client-info">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+                                 alt="Client" class="client-photo">
+                            <div>
+                                <h6 class="fw-bold mb-0">Michael Chen</h6>
+                                <small class="text-muted">Engineer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-4">
+                            "Excellent banking services with modern digital features. 
+                            The mobile app is intuitive and the customer service is outstanding."
+                        </p>
+                        <div class="client-info">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" 
+                                 alt="Client" class="client-photo">
+                            <div>
+                                <h6 class="fw-bold mb-0">Emily Rodriguez</h6>
+                                <small class="text-muted">Marketing Director</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3">Get Started Today</h2>
+                    <p class="lead text-muted">
+                        Ready to take control of your financial future? Contact us now.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <div class="info-item mb-4">
+                            <i class="bi bi-geo-alt-fill text-primary fs-3 me-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Office Location</h5>
+                                <p class="text-muted mb-0">123 Financial District, Suite 500<br>New York, NY 10004</p>
+                            </div>
+                        </div>
+                        <div class="info-item mb-4">
+                            <i class="bi bi-telephone-fill text-primary fs-3 me-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Phone Number</h5>
+                                <p class="text-muted mb-0">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="info-item mb-4">
+                            <i class="bi bi-envelope-fill text-primary fs-3 me-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Email Address</h5>
+                                <p class="text-muted mb-0">info@financehub.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="bi bi-clock-fill text-primary fs-3 me-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Business Hours</h5>
+                                <p class="text-muted mb-0">Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Last Name" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control" placeholder="Email Address" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="tel" class="form-control" placeholder="Phone Number">
+                            </div>
+                            <div class="col-12">
+                                <select class="form-select" required>
+                                    <option value="">Select Service Interest</option>
+                                    <option value="banking">Banking Solutions</option>
+                                    <option value="insurance">Insurance Coverage</option>
+                                    <option value="investment">Investment Management</option>
+                                    <option value="planning">Financial Planning</option>
+                                    <option value="payments">Digital Payments</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="4" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+                        <h4 class="fw-bold mb-3">
+                            <i class="bi bi-bank2 me-2"></i>FinanceHub
+                        </h4>
+                        <p class="text-muted mb-4">
+                            Your trusted partner for comprehensive financial services. 
+                            Building wealth and securing futures since 2008.
+                        </p>
+                        <div class="social-links">
+                            <a href="#home" class="text-light me-3"><i class="bi bi-facebook fs-5"></i></a>
+                            <a href="#home" class="text-light me-3"><i class="bi bi-twitter fs-5"></i></a>
+                            <a href="#home" class="text-light me-3"><i class="bi bi-linkedin fs-5"></i></a>
+                            <a href="#home" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#services" class="text-muted">Banking</a></li>
+                        <li><a href="#services" class="text-muted">Insurance</a></li>
+                        <li><a href="#services" class="text-muted">Investments</a></li>
+                        <li><a href="#services" class="text-muted">Planning</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="text-muted">About Us</a></li>
+                        <li><a href="#" class="text-muted">Careers</a></li>
+                        <li><a href="#" class="text-muted">News</a></li>
+                        <li><a href="#contact" class="text-muted">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted">Help Center</a></li>
+                        <li><a href="#" class="text-muted">Privacy Policy</a></li>
+                        <li><a href="#" class="text-muted">Terms of Service</a></li>
+                        <li><a href="#" class="text-muted">Security</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Resources</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted">Blog</a></li>
+                        <li><a href="#" class="text-muted">Calculators</a></li>
+                        <li><a href="#" class="text-muted">Guides</a></li>
+                        <li><a href="#" class="text-muted">Market Data</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2024 FinanceHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted mb-0">Secure • Trusted • Professional</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
